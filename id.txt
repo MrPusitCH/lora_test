@@ -1,1 +1,4 @@
 2CCF67FFFE98F156
+"server_address": "router.as1.cloud.thethings.network",
+"serv_port_up": 1700,
+"serv_port_down": 1700
