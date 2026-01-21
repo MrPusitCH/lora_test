@@ -1,17 +1,17 @@
 import RPi.GPIO as GPIO
 import time
 
-LED_PIN = 10  # GPIO10 = Pin 19
+LED_PINS = [10, 25, 7]
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(LED_PIN, GPIO.OUT)
+GPIO.setup(LED_PINS, GPIO.OUT)
 
 try:
     while True:
-        GPIO.output(LED_PIN, GPIO.HIGH)  # เปิดไฟ
-        time.sleep(0.5)
-        GPIO.output(LED_PIN, GPIO.LOW)   # ปิดไฟ
-        time.sleep(0.5)
+        for pin in LED_PINS:
+            GPIO.output(pin, GPIO.HIGH)
+            time.sleep(0.3)
+            GPIO.output(pin, GPIO.LOW)
 
 except KeyboardInterrupt:
     pass
