@@ -17,6 +17,20 @@ source ~/bmeenv/bin/activate
 python3 -m pip install --upgrade pip
 python3 -m pip install smbus2 bme280
 
+pi4 vnc
 
 sudo systemctl status vncserver-x11-serviced
 sudo systemctl enable --now vncserver-x11-serviced
+
+
+dpkg -l | grep -E "raspberrypi-ui-mods|lxde|lightdm"
+
+sudo apt update
+sudo apt install raspberrypi-ui-mods lightdm
+sudo reboot
+
+
+systemctl status lightdm
+
+sudo systemctl enable --now lightdm
+sudo reboot
