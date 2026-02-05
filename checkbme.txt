@@ -19,3 +19,4 @@ python3 -m pip install smbus2 bme280
 
 
 sudo systemctl status vncserver-x11-serviced
+sudo systemctl enable --now vncserver-x11-serviced
