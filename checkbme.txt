@@ -16,3 +16,6 @@ source ~/bmeenv/bin/activate
 
 python3 -m pip install --upgrade pip
 python3 -m pip install smbus2 bme280
+
+
+sudo systemctl status vncserver-x11-serviced
